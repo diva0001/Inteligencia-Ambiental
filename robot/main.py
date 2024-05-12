@@ -37,7 +37,7 @@ DRIVE_SPEED = 150
 PALA_ARRIBA = 100
 PALA_ABAJO = 0
 
-MQTT_Broker = "192.168.0.129"
+MQTT_Broker = "192.168.0.100"
 
 rojo = 31
 verde = 54
@@ -253,15 +253,6 @@ def vuelta():
     robot.turn(-226)
 
 def aplicarMovimiento(lista_movimientos, rojo, verde, azul, color_actual):
-    # movimiento = lista_movimientos[1][0]
-    # if movimiento in ["giro derecha", "giro izquierda"]:
-    #     if not(color_actual[0] >= (rojo - (lado/2))) or not(color_actual[0] <= (rojo + (lado/2))) or not (color_actual[1] >= (verde - (lado/2))) or not (color_actual[1] <= (verde + (lado/2))) or not (color_actual[2] >= (azul - (lado/2))) or not (color_actual[2] <= (azul + (lado/2))):
-    #         turn_rate = -20 if movimiento == "giro derecha" else 20
-    #         robot.turn(turn_rate)
-    #         return False
-    # lista_movimientos[1].pop(0)
-    # seguirVerde(color_actual, rojo, verde, azul, lado)
-    # return True
     movimiento = lista_movimientos[1][0]
     if movimiento in ["giro derecha", "giro izquierda"]:
         turn_rate = -80 if movimiento == "giro derecha" else 75
@@ -349,7 +340,6 @@ try:
     # while True:
     #     color = color_sensor.rgb()
     #     print(color)
-    #     # seguirVerde(color)
 
     subir_pala()
 

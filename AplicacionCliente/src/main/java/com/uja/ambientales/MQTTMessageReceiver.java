@@ -33,7 +33,7 @@ public class MQTTMessageReceiver implements MqttCallback {
 
     public MQTTMessageReceiver(Interfaz ui) {
         this.ui = ui;
-        this.broker = "tcp://192.168.0.129:1883";
+        this.broker = "tcp://192.168.0.100:1883";
         this.clientId = "Ismael";
         this.recibido1 = false;
         this.recibido2 = false;
